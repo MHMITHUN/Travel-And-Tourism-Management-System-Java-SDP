@@ -1,0 +1,81 @@
+                         PROJECT:Travel And Tourism MANAGEMENT SYSTEM
+
+DATABASE TABLES:
+
+                 -- Account Table
+CREATE TABLE account (
+    username         VARCHAR(50),
+    name             VARCHAR(50),
+    password         VARCHAR(50),
+    security         VARCHAR(50),
+    answer           VARCHAR(50)
+);
+
+-- Admin Table
+CREATE TABLE admin (
+    name             VARCHAR(50),
+    username         VARCHAR(50),
+    password         VARCHAR(50),
+    email            VARCHAR(50),
+    phone            VARCHAR(50),
+    nid              VARCHAR(50)
+);
+
+-- Customer Table
+CREATE TABLE customer (
+    name             VARCHAR(50),
+    username         VARCHAR(50),
+    password         VARCHAR(50),
+    email            VARCHAR(50),
+    phone            VARCHAR(50),
+    nid              VARCHAR(50)
+);
+
+-- Admin Login Table
+CREATE TABLE adminlogin (
+    username         VARCHAR(50),
+    password         VARCHAR(50)
+);
+
+-- Book Hotel Table
+CREATE TABLE bookhotel (
+    hotelname        VARCHAR(50),
+    name             VARCHAR(50),
+    username         VARCHAR(50),
+    persons          VARCHAR(50),
+    days             VARCHAR(50),
+    ac_nonac         VARCHAR(50),
+    food             VARCHAR(50),
+    totalprice       VARCHAR(50)
+);
+
+-- Book Package Table (with `end_date`)
+CREATE TABLE bookpackage (
+    place            VARCHAR(50),
+    name             VARCHAR(50),
+    username         VARCHAR(50),
+    persons          VARCHAR(50),
+    date             VARCHAR(50),
+    end_date         VARCHAR(50), 
+    totalprice       VARCHAR(50)
+);
+
+-- Hotel Table
+CREATE TABLE hotel (
+    name             VARCHAR(50),
+    state            VARCHAR(50),
+    ac               VARCHAR(50),
+    food             VARCHAR(50),
+    hotelcost        VARCHAR(50),
+    image            LONGBLOB
+);
+
+-- Package Table
+CREATE TABLE package (
+    place            VARCHAR(50),
+    state            VARCHAR(50),
+    price            VARCHAR(50),
+    days_nights      VARCHAR(50),
+    description      LONGTEXT,
+    image            LONGBLOB
+);

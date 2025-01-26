@@ -1,0 +1,69 @@
+Table account {
+    username  varchar(50) [pk]
+    name      varchar(50)
+    password  varchar(50)
+    security  varchar(50)
+    answer    varchar(50)
+}
+
+Table admin {
+    username  varchar(50) [pk, ref: > account.username]
+    name      varchar(50)
+    password  varchar(50)
+    email     varchar(50)
+    phone     varchar(50)
+    nid       varchar(50)
+}
+
+Table customer {
+    username  varchar(50) [pk, ref: > account.username]
+    name      varchar(50)
+    password  varchar(50)
+    email     varchar(50)
+    phone     varchar(50)
+    nid       varchar(50)
+}
+
+Table adminlogin {
+    username  varchar(50) [pk, ref: > admin.username]
+    password  varchar(50)
+}
+
+Table hotel {
+    name      varchar(50) [pk]
+    state     varchar(50)
+    ac        varchar(50)
+    food      varchar(50)
+    hotelcost varchar(50)
+    image     blob
+}
+
+Table package {
+    place     varchar(50) [pk]
+    state     varchar(50)
+    price     varchar(50)
+    days_nights varchar(50)
+    description text
+    image     blob
+}
+
+Table bookhotel {
+    hotelname  varchar(50) [ref: > hotel.name]
+    username   varchar(50) [ref: > customer.username]
+    persons    varchar(50)
+    days       varchar(50)
+    ac_nonac   varchar(50)
+    food       varchar(50)
+    totalprice varchar(50)
+    primary key (hotelname, username)
+}
+
+Table bookpackage {
+    place      varchar(50) [ref: > package.place]
+    username   varchar(50) [ref: > customer.username]
+    persons    varchar(50)
+    date       varchar(50)
+    end_date   varchar(50)
+    totalprice varchar(50)
+    primary key (place, username)
+}
