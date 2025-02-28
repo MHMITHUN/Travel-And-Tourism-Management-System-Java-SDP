@@ -1,6 +1,6 @@
 # Travel-And-Tourism-Management-System  
 
-### 💖 Developed by My Wife [Sumya Soma](https://github.com/sumyasoma) & Me  
+### 💖 Developed by My Wife [Sumya Soma](https://github.com/sumyasoma) & Me [Md.Mahamudul Hasan](https://github.com/MHMITHUN) 
 
 We developed the **"Travel And Tourism Management System"** desktop application using **Java Swing and AWT**. 🚀  
 
